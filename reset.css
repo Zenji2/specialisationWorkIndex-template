@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    /*padding: 0;*/
 }
 
 body {
@@ -24,6 +24,9 @@ p, li, figcaption {
     max-width: 80rch;
 }
 
+h3 {
+    margin-top: 0;
+}
 
 img,
 picture,
