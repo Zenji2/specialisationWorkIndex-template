@@ -60,11 +60,50 @@
         <section>
             <h3>Project Framing</h3>
             <p>
-                
+                The project is going to be run in a web browser, and the one of the extended techniques I'm looking to use is Spatial Input, using the mousemove Event (player two role).
+            </p>
+            <p>
+                The main concept I want to keep is that the two players are not doing the same thing. One person plays the melody on the keyboard, holding down the keys to sustain notes. The second person moves the mouse across the screen, and depending on where they are will change how the note sounds. 
+            </p>
+            <p>
+                I want the characterisation to feel like a simple game rather than a proper synth with menus and knobs everywhere. I want something that two people can sit down and just start playing with straight away, without one person having to explain it to the other first.
+            </p>
+            <p>
+                For the screen, I will need it to show something visually so the mouse player can see what their movement is doing and not just hear it. I will be using Web Audio API for the sound, letter keys for the keyboard player, and mousemove for the mouse player. I'm not too sure what visual and audio style I will be doing for my project, but I will continue to research and update it. I would rather get the two inputs working well together first before adding anything extra.
+            </p>
+            <p>
+                My project will be leaving out networking, which means no playing with someone online, only local play. It also means there is no accounts, saves, or recordings, everything is done locally. I will also not be including touchscreen as an input, since it doesn't work the same way as a mouse would (teleporting intstead of dragging). 
             </p>
         </section>
         <section>
             <h3>Interaction Design Analysis</h3>
+            <p>
+                For my design analysis, I looked at four browser based tools to help me figure out how my project should feel. I have two sources from the assignment 1 relevant UI list and two sources that I have researched on my own.
+            </p>
+            <h3>
+                <a href="https://bellicapelli.itch.io/ots-01">OTS-01 by bellicapelli and Subzerofusion</a>
+            </h3>
+            <p>
+                OTS-01 is a synth where you draw and edit your own sound waves while using the letter/number keys on the keyboard. It's a single player tool, but what stood out to me is that the authors called it a "Toy Synth" rather than an instrument. This is something that I would like for my project, not be seen as an actual instrument but rather something that two-people can play with. It feels playful and relaxing to play when you first load the synth, wanting to try and experiment with the different buttons and drawing. 
+            </p>
+            <h3>
+                <a href="https://aurensnyder.com/JUNK/cycle.html">UN / CYCLE by Auren Snyder</a>
+            </h3>
+            <p>
+                UN / CYCLE is an interesting tool, where when you first open it, it is a blank screen with no instructions, ui, or menu. You just move and hold down the mouse across the screen and your drawing will come to life. What I want to take from this is that the feedback doesn't need any words or numbers to indicate that something is playing, but rather the visuals on the screen. It made me think about the type of canvas I should use for my TWOGETHER project, and how it should just be a shape or trail that changes as the mouse player moves.
+            </p>
+            <h3>
+                <a href="https://labs.dinahmoe.com/plink/">Plink by DINAHMOE LABS</a>
+            </h3>
+            <p>
+                Plink is a multiplayer music toy where your mouse position sets the pitch and clicking plays a note. It is an online tool, so multiple people from across the world can join in and play notes with you. Since everyone is using the exact same input to do the same thing, it kind of is the opposite of what I'm going for. However, what I like about the game is the way you can drag and move the mouse to change the pitch of the note. This makes me more confident about keeping the concept of the two roles different from each other, and local only. 
+            </p>
+            <h3>
+                <a href="https://musiclab.chromeexperiments.com/Shared-Piano/">Shared Piano by Chrome Music Lab</a>
+            </h3>
+            <p>
+                Shared Piano is a tool that lets up to ten people play the same on screen piano at once through a shared link. Each player gets their own symbol and coloured trail on the keys so that you can tell who's playing what while it is running. Like Plink, this multiplayer tool is the opposite of what I'm going for but I picked this for a different reason. I liked the way that Shared Piano uses colour to differentiate who did what, which gave me an idea about my project's screen canvas. Instead of coming up with different ways to show what each player is doing, I can just colour the keyboard player's notes and mouse player's trail differently. That way both people can see how their inputs are combining without having confusion as to who's doing what. I also like how simple and minimalistic the UI is for the Shared Piano, which is the visual element that I think I'm going for, something that is fun and you can play around with rather than an actual instrument tool.
+            </p>
         </section>
     </main>
 
