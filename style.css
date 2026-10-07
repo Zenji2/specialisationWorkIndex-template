@@ -80,6 +80,22 @@ footer {
     margin-block-start: 3rem;
 }
 
+.spaced-link {
+  display: block; 
+  margin-top: 20px;     
+  margin-bottom: 20px; 
+  margin-left: 0px;    
+  margin-right: 0px;   
+}
+
+.commit {
+  display: inline-block; 
+  margin-top: 0px;     
+  margin-bottom: 20px; 
+  margin-left: 0px;    
+  margin-right: 0px;   
+}
+
 /*technique from Kevin Powell*/
 /*https://youtu.be/CU8Plk-53RU?si=zMpP0Pfbg1SaXeDB&t=255*/
 /*longer post about how this works and the * + * selector*/
