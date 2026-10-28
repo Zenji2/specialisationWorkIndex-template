@@ -35,16 +35,258 @@
             <a href="./assignment1.html">Assignment 1</a>
             <a href="./assignment2.html">Assignment 2</a>
         </nav>
-
         <main>
             <section id="intro-section">
-                <p> This is a running index for my work in Interface Design and Development. This is where my system design document, creative process, notes, and prototypes will be published as the semester goes on.
-                    
+                <h1>TWOGETHER</h1>
+                <h3>Brief Synopsis</h3>
+                <p>TWOGETHER is a browser based, two-player collaborative audio instrument and rhythm game. It requires two players to play, with one player using the keyboard, and the other using the mouse. The keyboard player can press the keyboard letters from A-L to play a note, while the mouse player uses mouse movement to change the pitch of that note. There are circles in a grid format that show the players what each note will play referencing the keyboard letter "A".
+                <h3>Concept Evolution</h3>
+                <p>During the initial exploration phases in assignment 1 and 2, the original concept/idea was to make a two-player toy synthesiser. In the parallel prototypes, I looked at different layouts and mappings that would improve how my audio instrument looked and worked. Following peer user testing and critical evaluation of my audio instrument, I decided to make a major change to it.</p>
+                <p>I decided to replace the filter and reverb with a pitch and octave change instead due to it being a better change for audio making. I found that reverb and filter doesn't really change much when it comes to audio, and I found it a weak regarding my concept. If I really wanted the players to work together to create a new sound, I needed to change the octaves and semitones instead so they aren't limited to just 9 notes.</p>
+                <p>I also decided to make the pivot to making it into a game, on top of being a free play two-player synth. As I thought about how to make the characterisation "Collaboration" more obvious in my audio instrument, I wanted to think of a way they could work together towards a common goal, rather than just free playing and making different notes. I decided to add three songs to my audio instrument that the players can replicate, working together to hit the orbs and score points (and finish the song). This required both players to coordinate their spatial positioning and timing.</p>
+                <h3>Design Scenario</h3>
+                <p><strong>Prompt:</strong> Design a synthesizer to be operated by two or more people using a single computer.
                 </p>
+                <p><strong>Context:</strong> Instruments (and increasingly computational devices) are typically understood as being designed to be operated by one person at a time. While many environments exist for playing these alongside others in physical or virtual spaces, there are limited examples of browser-based instruments exploring what a locally cooperative or split screen approach might produce.</p>
+                <h3>My Project Response -  TWOGETHER</h3>
+                <a href="https://zenji2.github.io/TWOGETHER-TOOL/" target="_blank">TWOGETHER AUDIO INSTRUMENT - CLICK HERE TO PLAY</a>
+                <p>My project responds to the scenario by allowing two players their own individual role, and can collaborate together to create a different sound. Without the keyboard input, the mouse player cannot play the sound, and without the mouse input, the keyboard player is stuck with the original notes. This shows that neither player can complete the musical game independently, satisfying the design scenario of a local cooperative browser instrument.</p>
+                <h3>Core Interactive Features</h3>
+                <p><strong>2D Pitch Grid:</strong> I divided the canvas into a 5x3 grid, using the previous mapping from a parallel prototype as reference on how to dynamically change the pitch for each tile area.</p>
+                <p><strong>Cooperative Rhythm Game:</strong> Three songs can be selected and played, generating orbs that would appear on the note needed to play it. A new orb will generate on the next note needed, and continues until the song is over.</p>
+                <p><strong>Visual HUD feedback:</strong> There is an animated score counter, dynamic floating success/miss popups, and a ring that closes to visually show how much time to the players until it disappears. There is also the score and notes in the header that changes as the song goes on, allowing players to track how many notes and score they are on mid-game. Above the screen keyboard letters also shows dynamically changing X and Y feedback, allowing players another way to see how the mouse movement has changed the note.</p>
+                <p><strong>Freeplay:</strong> Allow users to play the audio instrument without needing to touch the game part. This allows both players to test the controls, or even make their own music by working together to create different notes that are unachievable individually. I also allowed the mouse player to click on the on screen keyboard letters to test out the keys.</p>
+                <p><strong>Game Controls:</strong> The players can pause, resume, and restart the game whenever they feel like. If they need to take a break in the middle of a game, they can just hit the pause button and when they click resume it starts at the note they paused at rather than from the start. Users can also click the listen button to see what the song sounds like before playing. They can also learn how to play the song in freeplay mode as it displays the notes in listening mode.</p>
+                <h3>Extended Technique: Spatial Input - mousemove event</h3>
+                <p>Rather than just doing a simple point and click pointer function, I utilised spatial input via the mousemove event through continiously tracking the cursor coordinates across the canvas to change the pitch in real time.</p>
+                <p>As the mouse player moves the cursor across the canvas, the mousemove listener captures the offsetX and offsetY coordinates. These coordinates are then mapped to the pitch grid, allowing the change in pitch in both X and Y axis.</p>
+                <h3>Responsive and Adaptive Design System</h3>
+                <p>I decided to make my visual aesthetic styled around a lo-fi twilight city landscape, using grey tones and orange accents. I also used glow and neon to make the colours pop out, contrasting against the background and make it easier for the users to see.</p>
+                <p>For screen size adapability, I made TWOGETHER adapt across the following desktop screen sizes:</p>
+                <p>Compact/Medium (840px and under)</p>
+                <p>Expanded (840px-1199px)</p>
+                <p>Large (1200px-1600px)</p>
+                <p>Extra Large(>1600px)</p>
 
-                <p> You can find my <a href="https://au.miro.com/app/board/u3jVOf5GMVg=/?share_link_id=210217706839">Community of Practice documentation</a> on Miro, where it shows my weekly contributions, feedback, in-class activites, and what I've learnt during that week.
-                    
-                </p>
+                <details class="commit">
+    <summary>Git Commit Log</summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Subject</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 12:23:53 2026 +1000</td>
+                <td>Initial commit</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 12:26:59 2026 +1000</td>
+                <td>Cloned audioInstrument code</td>
+                <td>- Copied code from audioInstrument project<br>- Added sections for both players<br>- Added a context dialog</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 12:46:40 2026 +1000</td>
+                <td>Updated index</td>
+                <td>- Changed title from audio instrument to TWOGETHER</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 12:51:13 2026 +1000</td>
+                <td>Add keyboard keys</td>
+                <td>- Added keyboard button visuals and assigned note to them</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 12:54:59 2026 +1000</td>
+                <td>Removed old code</td>
+                <td>- Deleted any old code from audioInstrument that doesn't help</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 13:00:26 2026 +1000</td>
+                <td>Removed old code</td>
+                <td>- Deleted old code from audioInstrument project<br>- Made a temporary canvas for now</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 13:07:37 2026 +1000</td>
+                <td>Added temp canvas and const for players</td>
+                <td>- Added const for keyboard and mouse to wire notes later<br>- Made keyboard letters bigger<br>- Visualised the canvas of mouse player</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 13:11:31 2026 +1000</td>
+                <td>Updated style</td>
+                <td>- Added a main display visual</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Aug 31 13:23:13 2026 +1000</td>
+                <td>Update style.css</td>
+                <td>- Placed letter keys at bottom for more space on screen</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Sep 8 21:02:32 2026 +1000</td>
+                <td>Changed layout</td>
+                <td>- Made the canvas take up whole screen</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Sep 8 21:38:55 2026 +1000</td>
+                <td>Added sound and highlight key</td>
+                <td>- When letter key is held it makes sound<br>- Made visual of key light up corresponding to key letter pressed<br>- When letter key is stopped being held down it stops sound<br>- Added tone/reverb change<br>- Added quadrant section to visualise</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Sat Sep 19 13:13:23 2026 +1000</td>
+                <td>Made mouse function</td>
+                <td>- Added function to moving mouse</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Sat Sep 19 13:16:36 2026 +1000</td>
+                <td>Made layout bigger</td>
+                <td>- Changed height to 100% to fill whole screen instead of it being a small section.<br>- Replaced the feedback with a mouse trail that fades out</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 1 01:44:53 2026 +1000</td>
+                <td>Parallel Prototype Five - Changed Feedback/Layout</td>
+                <td>- Got rid of the quadrant layout<br>- Helps visualise feedback better<br>- Replaced with a blob circle in the middle of screen that changes size and glow radius depending on where you position mouse</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 1 01:52:09 2026 +1000</td>
+                <td>Parallel Prototype 6 - Feedback/Layout</td>
+                <td>- Removed quadrant layout and text</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Sun Oct 4 14:23:00 2026 +1100</td>
+                <td>Create commit history</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 8 10:24:53 2026 +1100</td>
+                <td>Merge branch 'TwogetherExplorationSix'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 8 10:26:38 2026 +1100</td>
+                <td>Merge branch 'TwogetherExplorationFive'</td>
+                <td>- Fixed and now work together<br>- Didn't work at first due to it using different canvas systems</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 15 10:55:51 2026 +1100</td>
+                <td>Merged two branches to main</td>
+                <td>- Merged my circle and mouse feedback branch<br>- Modified values of maprange, wetness, and filter</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 15 11:05:39 2026 +1100</td>
+                <td>Changed tone/values</td>
+                <td>- Made the tone sound better because participants in testing said it didn't sound pleasant and could be better</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Thu Oct 15 11:30:16 2026 +1100</td>
+                <td>Experiment with colour</td>
+                <td>- Changed the colour palette of the app<br>- Made the background look better using a gradient</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Fri Oct 16 22:45:09 2026 +1100</td>
+                <td>Fix the jump in mapping and changed background</td>
+                <td>- Fixed the sudden jump when moving the mouse across a part of the canvas, causing it to jump from one end to the other. I made it more gradual.<br>- Using another tone.js<br>- Used AI to help clean up code/fixing/debugging and help with making it look more aesthetically pleasing (colours, shape and layout of grid).<br>- Swapped the blob for the grid layout prototype I experimented with.</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Oct 26 23:23:54 2026 +1100</td>
+                <td>Transitioning to octaves/semitones</td>
+                <td>- Instead of tones/reverb, I decided to switch to octaves/semitones, which is much better instrument and musical wise.<br>- Match the keyboard letter notes to what is being hovered over on canvas.<br>- Add visual feedback above letters to show what semitones/octaves they are</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Mon Oct 26 23:50:33 2026 +1100</td>
+                <td>Keyboard and visual update</td>
+                <td>- Made each keyboard letter button have their own data key</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Oct 27 00:15:09 2026 +1100</td>
+                <td>Small fix</td>
+                <td>- Deleted modal close<br>- Fixed small issues<br>- Added top header button controls</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Oct 27 20:19:49 2026 +1100</td>
+                <td>Added songs.js</td>
+                <td>- Top buttons and fixes<br>- Able to play 3 songs<br>- Added orbs that appear on the screen that the mouse player moves to and the keyboard player hits the corresponding key.</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Oct 27 22:40:46 2026 +1100</td>
+                <td>Transition to game</td>
+                <td>- Transitioned the instrument into a game instrument synth, where players have to collaborate and work together to play the song.</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Tue Oct 27 23:04:41 2026 +1100</td>
+                <td>Added pause and resume function</td>
+                <td>- Users are now able to pause and resume the game whenever<br>- It will play the note that you are currently at when paused/resumed<br>- Stop and play button</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 00:21:11 2026 +1100</td>
+                <td>Added listening function</td>
+                <td>- Players are now able to listen to the song before playing to know how it sounds.<br>- Dim screen when paused<br>- Fade the +100 and missed message<br>- Added ring around orb that shrinks</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 12:33:52 2026 +1100</td>
+                <td>Added effects</td>
+                <td>- Added mouse trails<br>- Better layout for smaller screen sizes<br>- Made font able to get offline rather than link<br>- Able to test the keys using mouse</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 13:17:27 2026 +1100</td>
+                <td>Instructions</td>
+                <td>- Errors console, resizing and focus control<br>- Updated the instructions<br>- Typos</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 13:24:31 2026 +1100</td>
+                <td>Debugging</td>
+                <td>- Cleaned up index.html<br>- Added background image<br>- Just aesthetic purposes change</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 14:23:26 2026 +1100</td>
+                <td>Aesthetic and looks revamp</td>
+                <td>- Changed the look of my game without changing any functioning</td>
+            </tr>
+            <tr>
+                <td>Zenji2</td>
+                <td>Wed Oct 28 14:43:28 2026 +1100</td>
+                <td>Fixed select song highlight</td>
+                <td>- Added better dropdown</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
             </section>
         </main>
 
@@ -64,6 +306,14 @@
             Nathaniel Choo
             </a>
         </p>
+
+        <aside></aside>
+    <p>
+                    Link to Community of Practice:
+        <a href="https://au.miro.com/app/board/u3jVOf5GMVg=/?share_link_id=210217706839">
+            Miro
+        </a>
+    </p>
     </footer>
 </body>
 </html>
